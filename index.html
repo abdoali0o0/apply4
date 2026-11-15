@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الوظائف في RTU</title>
+<meta name="description" content="قدّم على وظايف RTU: شركة أنظمة وتسويق بتشتغل بالذكاء الاصطناعي. مطورين، مصممين، مونتيرين، كتّاب محتوى، ومبيعات.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="اشتغل مع RTU · الـ AI أداتك الأولى">
+<meta property="og:description" content="مطورين، مصممين، مونتيرين، كتّاب محتوى، ومبيعات. قدّم في ٢٠ دقيقة.">
+
+
+<meta name="theme-color" content="#FFC300">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFC300'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='24' text-anchor='middle' fill='%231E1A0E'%3ERTU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Base for the standalone careers page (the glass theme follows in careers.css) */
+:root{--f-display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;--f-body:"IBM Plex Sans Arabic","Readex Pro",system-ui,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;color-scheme:light}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark}}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);scroll-padding-top:84px}
+body{margin:0;font-family:var(--f-body);font-size:15px;line-height:1.7;min-height:100vh}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.25;text-wrap:balance;margin:0}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cv-link);outline-offset:2px}
+[hidden]{display:none!important}
+.led{width:9px;height:9px;border-radius:50%;flex:none;display:inline-block}
+.hint{font-size:13px;color:var(--cv-muted)}
+.mono{font-family:var(--f-mono)!important;font-size:13.5px}
+.sel{user-select:all}
+.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;overflow:hidden}
+#hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(180deg,var(--cv-glass-a),var(--cv-glass-b));-webkit-backdrop-filter:blur(20px) saturate(1.8);backdrop-filter:blur(20px) saturate(1.8);border-bottom:1px solid var(--cv-edge-low);box-shadow:inset 0 -1px 0 var(--cv-edge-low)}
+#hdr .bar{display:flex;align-items:center;gap:8px;min-height:62px}
+#hdr .sp{flex:1}
+.brand{display:flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:22px;letter-spacing:.04em}
+.brand small{font-size:11px;color:var(--cv-muted);letter-spacing:.06em;font-weight:500}
+@media (max-width:480px){.brand small,.hide-sm{display:none}}
+#ftr{padding-block:28px;color:var(--cv-muted);font-size:13px;text-align:center}
+.cv-general{margin-top:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.cv-general h4{font-size:16px}
+.cv-general p{font-size:14px;color:var(--cv-muted)}
+.cv-done h2{font-size:clamp(26px,4vw,40px);margin-top:16px}
+.cv-done .cv-sub{margin-inline:auto;margin-top:8px}
+.cv-cta.center{justify-content:center}
+.cv-done{display:flex;flex-direction:column;align-items:center}
+/* in dark mode the yellow marker would sit under light text, so the phrase turns yellow instead */
+@media (prefers-color-scheme: dark){body .cv-hero h1 .hl{background:none;color:var(--cv-accent);padding:0}}
+
+/* RTU Careers — yellow "liquid glass": translucent, light-bending panels floating over slow yellow light.
+   Scoped to body[data-page="careers"]; the rest of the site keeps its own palette. */
+body[data-page="careers"]{
+  --cv-canvas:#FFF3C4; --cv-blob1:#FFD60A; --cv-blob2:#FFB703; --cv-blob3:#FFF27A; --cv-blob4:#FFFFFF;
+  --cv-ink:#1E1A0E; --cv-muted:#5E5333; --cv-link:#8A5A00;
+  --cv-accent:#FFC300; --cv-accent-ink:#1E1A0E; --cv-btn-a:#FFE680; --cv-btn-b:#FFC300;
+  --cv-glass-a:rgba(255,255,255,.62); --cv-glass-b:rgba(255,255,255,.2);
+  --cv-edge:rgba(255,255,255,.85); --cv-edge-low:rgba(255,255,255,.28); --cv-sheen:rgba(255,255,255,.6);
+  --cv-shadow:rgba(122,84,0,.22); --cv-field:rgba(255,255,255,.55); --cv-field-line:rgba(120,90,10,.2);
+  --cv-ok:#0E7A4F; --cv-err:#B3261E;
+  /* map site tokens so shared header, modal and toast fit the page */
+  --ink:var(--cv-ink); --muted:var(--cv-muted); --accent:var(--cv-link); --accent-ink:#fff; --accent-soft:rgba(255,195,0,.25);
+  --line:var(--cv-field-line); --bg:var(--cv-field); --sunk:rgba(255,255,255,.35); --surface:#FFFBEA; --danger:var(--cv-err);
+  background:var(--cv-canvas); color:var(--cv-ink);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body[data-page="careers"]{
+  --cv-canvas:#110E05; --cv-blob1:#7A5C00; --cv-blob2:#8F6400; --cv-blob3:#4A3B00; --cv-blob4:#2B2410;
+  --cv-ink:#FFF7DB; --cv-muted:#CDBF93; --cv-link:#FFD23F;
+  --cv-accent:#FFD23F; --cv-accent-ink:#1E1A0E; --cv-btn-a:#FFE27A; --cv-btn-b:#F5B800;
+  --cv-glass-a:rgba(70,58,22,.5); --cv-glass-b:rgba(28,23,9,.32);
+  --cv-edge:rgba(255,236,170,.34); --cv-edge-low:rgba(255,236,170,.08); --cv-sheen:rgba(255,240,190,.1);
+  --cv-shadow:rgba(0,0,0,.5); --cv-field:rgba(0,0,0,.28); --cv-field-line:rgba(255,230,150,.2);
+  --cv-ok:#5BD69D; --cv-err:#FF8A80;
+  --accent-ink:#1E1A0E; --surface:#1E190B; --sunk:rgba(255,236,170,.06)}}
+:root[data-theme="dark"] body[data-page="careers"]{
+  --cv-canvas:#110E05; --cv-blob1:#7A5C00; --cv-blob2:#8F6400; --cv-blob3:#4A3B00; --cv-blob4:#2B2410;
+  --cv-ink:#FFF7DB; --cv-muted:#CDBF93; --cv-link:#FFD23F;
+  --cv-accent:#FFD23F; --cv-accent-ink:#1E1A0E; --cv-btn-a:#FFE27A; --cv-btn-b:#F5B800;
+  --cv-glass-a:rgba(70,58,22,.5); --cv-glass-b:rgba(28,23,9,.32);
+  --cv-edge:rgba(255,236,170,.34); --cv-edge-low:rgba(255,236,170,.08); --cv-sheen:rgba(255,240,190,.1);
+  --cv-shadow:rgba(0,0,0,.5); --cv-field:rgba(0,0,0,.28); --cv-field-line:rgba(255,230,150,.2);
+  --cv-ok:#5BD69D; --cv-err:#FF8A80;
+  --accent-ink:#1E1A0E; --surface:#1E190B; --sunk:rgba(255,236,170,.06)}
+
+
+/* moving light behind the glass */
+.cv-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--cv-canvas)}
+.cv-bg i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.85;will-change:transform}
+.cv-bg i:nth-child(1){width:52vmax;height:52vmax;background:var(--cv-blob1);top:-18vmax;inset-inline-start:-12vmax;animation:cvA 26s ease-in-out infinite alternate}
+.cv-bg i:nth-child(2){width:40vmax;height:40vmax;background:var(--cv-blob2);bottom:-16vmax;inset-inline-end:-10vmax;animation:cvB 30s ease-in-out infinite alternate}
+.cv-bg i:nth-child(3){width:34vmax;height:34vmax;background:var(--cv-blob3);top:30%;inset-inline-start:38%;animation:cvC 22s ease-in-out infinite alternate}
+.cv-bg i:nth-child(4){width:26vmax;height:26vmax;background:var(--cv-blob4);top:8%;inset-inline-end:12%;opacity:.7;animation:cvB 34s ease-in-out infinite alternate-reverse}
+@keyframes cvA{to{transform:translate(14vmax,10vmax) scale(1.08)}}
+@keyframes cvB{to{transform:translate(-12vmax,-8vmax) scale(.92)}}
+@keyframes cvC{to{transform:translate(-10vmax,12vmax) scale(1.12)}}
+
+/* glass header */
+body[data-page="careers"] .topbar{background:linear-gradient(180deg,var(--cv-glass-a),var(--cv-glass-b));-webkit-backdrop-filter:blur(20px) saturate(1.8);backdrop-filter:blur(20px) saturate(1.8);border-bottom:1px solid var(--cv-edge-low);box-shadow:inset 0 -1px 0 var(--cv-edge-low)}
+body[data-page="careers"] .nav a:hover,body[data-page="careers"] .nav a.active{background:var(--cv-glass-a)}
+body[data-page="careers"] .led{background:var(--cv-accent);box-shadow:0 0 0 3px rgba(255,195,0,.3)}
+body[data-page="careers"] .btn.primary{background:linear-gradient(180deg,var(--cv-btn-a),var(--cv-btn-b));border-color:transparent;color:var(--cv-accent-ink)}
+body[data-page="careers"] footer.site{background:transparent;border-top:1px solid var(--cv-edge-low)}
+
+/* the glass material */
+.g{position:relative;isolation:isolate;border-radius:30px;background:linear-gradient(145deg,var(--cv-glass-a),var(--cv-glass-b));
+  -webkit-backdrop-filter:blur(26px) saturate(1.9);backdrop-filter:blur(26px) saturate(1.9);
+  box-shadow:inset 0 1px 0 var(--cv-edge),inset 0 -1px 0 var(--cv-edge-low),inset 0 0 24px var(--cv-edge-low),0 22px 50px -18px var(--cv-shadow)}
+.g::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.2px;pointer-events:none;
+  background:linear-gradient(155deg,var(--cv-edge),transparent 32%,transparent 68%,var(--cv-edge-low));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.g::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:radial-gradient(90% 70% at var(--mx,20%) var(--my,0%),var(--cv-sheen),transparent 62%);transition:background-position .2s}
+.g.sm{border-radius:20px}
+
+.cv{color:var(--cv-ink)}
+.cv a{color:var(--cv-link)}
+.cv-wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.cv-sec{padding-block:28px}
+.cv-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:13px;font-weight:600;letter-spacing:.06em;padding:6px 14px;border-radius:999px}
+.cv-eyebrow .led{width:8px;height:8px}
+
+.cv-hero{padding-block:44px 20px}
+.cv-hero-card{padding:clamp(24px,5vw,56px);display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:end}
+@media (max-width:860px){.cv-hero-card{grid-template-columns:1fr}}
+.cv-hero h1{font-size:clamp(36px,6vw,68px);font-weight:700;letter-spacing:-.015em;line-height:1.12;margin-top:16px}
+.cv-hero h1 .hl{background:linear-gradient(180deg,transparent 58%,var(--cv-accent) 58%,var(--cv-accent) 92%,transparent 92%);padding-inline:4px}
+.cv-hero .lede{font-size:18px;color:var(--cv-muted);margin-top:16px;max-width:56ch}
+.cv-facts{display:grid;gap:10px}
+.cv-fact{padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.cv-fact span{color:var(--cv-muted);font-size:14px}
+.cv-fact b{font-family:var(--f-display);font-size:16px;text-align:end}
+.cv-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+
+.gbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:999px;border:0;cursor:pointer;font-weight:600;font-size:15px;color:var(--cv-ink);text-decoration:none;white-space:nowrap;position:relative;isolation:isolate;
+  background:linear-gradient(145deg,var(--cv-glass-a),var(--cv-glass-b));-webkit-backdrop-filter:blur(16px) saturate(1.8);backdrop-filter:blur(16px) saturate(1.8);
+  box-shadow:inset 0 1px 0 var(--cv-edge),inset 0 0 0 1px var(--cv-edge-low),0 8px 20px -10px var(--cv-shadow);transition:transform .15s}
+.gbtn:hover{transform:translateY(-1px)}
+.gbtn:active{transform:translateY(1px) scale(.99)}
+.gbtn.primary{background:linear-gradient(180deg,var(--cv-btn-a),var(--cv-btn-b));color:var(--cv-accent-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -2px 6px rgba(150,95,0,.25),0 10px 24px -10px rgba(190,130,0,.6)}
+.gbtn.sm{padding:7px 14px;font-size:13.5px}
+.gbtn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+
+.cv-h2{font-size:clamp(24px,3.2vw,34px);margin-bottom:6px}
+.cv-sub{color:var(--cv-muted);font-size:16px;max-width:62ch}
+.cv-steps-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+@media (max-width:820px){.cv-steps-row{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.cv-steps-row{grid-template-columns:1fr}}
+.cv-step{padding:18px}
+.cv-step .n{font-family:var(--f-mono);font-size:13px;color:var(--cv-link)}
+.cv-step h3{font-size:17px;margin:4px 0}
+.cv-step p{font-size:14px;color:var(--cv-muted)}
+
+.cv-group{margin-top:22px}
+.cv-group h3{font-size:15px;color:var(--cv-muted);font-family:var(--f-display);margin-bottom:10px;letter-spacing:.04em}
+.cv-roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.cv-role{padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.cv-role h4{font-size:17px}
+.cv-role p{font-size:14px;color:var(--cv-muted);flex:1}
+.cv-role .gbtn{align-self:flex-start}
+
+/* application */
+.cv-app{padding:clamp(18px,3.5vw,36px)}
+.cv-prog{display:flex;gap:6px;overflow-x:auto;padding:6px;border-radius:999px;margin-bottom:22px;scrollbar-width:none}
+.cv-prog::-webkit-scrollbar{display:none}
+.cv-prog button{flex:1 0 auto;display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--cv-muted);padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13.5px;white-space:nowrap}
+.cv-prog button .n{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:12px;background:var(--cv-field);box-shadow:inset 0 0 0 1px var(--cv-field-line)}
+.cv-prog button.done{color:var(--cv-ink)}
+.cv-prog button.done .n{background:var(--cv-ink);color:var(--cv-canvas);box-shadow:none}
+.cv-prog button.cur{background:linear-gradient(180deg,var(--cv-btn-a),var(--cv-btn-b));color:var(--cv-accent-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.cv-prog button.cur .n{background:rgba(255,255,255,.6);color:var(--cv-accent-ink);box-shadow:none}
+.cv-prog button[disabled]{cursor:default}
+.cv-prog .bar{display:none}
+@media (max-width:640px){.cv-prog button:not(.cur) .t{display:none}}
+.cv-step-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:18px}
+.cv-step-head h2{font-size:clamp(22px,3vw,30px)}
+.cv-step-head p{color:var(--cv-muted)}
+.cv-saved{font-size:12.5px;color:var(--cv-muted);font-family:var(--f-mono)}
+
+.cv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+@media (max-width:640px){.cv-grid{grid-template-columns:1fr}}
+.cvf{display:flex;flex-direction:column;gap:7px;min-width:0}
+.cvf.full{grid-column:1/-1}
+.cvf > label,.cvf .q{font-family:var(--f-display);font-weight:600;font-size:14.5px;line-height:1.5}
+.cvf .q .req,.cvf > label .req{color:var(--cv-err);margin-inline-start:3px}
+.cvf .hint{font-size:13px;color:var(--cv-muted)}
+.cvf input:not([type=checkbox]):not([type=radio]):not([type=file]),.cvf select,.cvf textarea{width:100%;background:var(--cv-field);border:1px solid var(--cv-field-line);border-radius:14px;padding:11px 14px;color:var(--cv-ink);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 1px 2px rgba(0,0,0,.04)}
+.cvf textarea{min-height:110px;resize:vertical;line-height:1.7}
+.cvf input:focus,.cvf select:focus,.cvf textarea:focus{outline:none;border-color:var(--cv-accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--cv-accent) 35%,transparent)}
+.cvf.bad input,.cvf.bad select,.cvf.bad textarea,.cvf.bad .cv-seg,.cvf.bad .cv-chips{border-color:var(--cv-err);box-shadow:0 0 0 3px color-mix(in srgb,var(--cv-err) 22%,transparent)}
+.cvf .msg{font-size:13px;color:var(--cv-err);min-height:0}
+.cvf .cnt{font-size:12px;color:var(--cv-muted);font-family:var(--f-mono);align-self:flex-end}
+.cvf .cnt.ok{color:var(--cv-ok)}
+.cv-seg{display:flex;flex-wrap:wrap;gap:6px;padding:5px;border-radius:16px;background:var(--cv-field);border:1px solid var(--cv-field-line)}
+.cv-seg button{flex:1 1 auto;border:0;background:transparent;padding:8px 12px;border-radius:12px;cursor:pointer;font-weight:600;color:var(--cv-muted);font-size:14px}
+.cv-seg button.on{background:linear-gradient(180deg,var(--cv-btn-a),var(--cv-btn-b));color:var(--cv-accent-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 4px 10px -6px rgba(150,95,0,.6)}
+.cv-chips{display:flex;flex-wrap:wrap;gap:8px;border-radius:16px;border:1px solid transparent;padding:2px}
+.cv-chips label{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--cv-field);border:1px solid var(--cv-field-line);font-size:13.5px;font-weight:500;cursor:pointer}
+.cv-chips label:has(input:checked){background:var(--cv-ink);color:var(--cv-canvas);border-color:var(--cv-ink)}
+.cv-chips input{accent-color:var(--cv-accent);margin:0}
+.cv-rate{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.cv-rate button{width:40px;height:40px;border-radius:12px;border:1px solid var(--cv-field-line);background:var(--cv-field);cursor:pointer;font-family:var(--f-mono);font-weight:600;color:var(--cv-muted)}
+.cv-rate button.on{background:linear-gradient(180deg,var(--cv-btn-a),var(--cv-btn-b));color:var(--cv-accent-ink);border-color:transparent}
+.cv-rate .lbl{font-size:12.5px;color:var(--cv-muted);margin-inline-start:6px}
+.cv-rate-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--cv-field-line)}
+@media (max-width:560px){.cv-rate-row{grid-template-columns:1fr}}
+.cv-consent{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--cv-field);border:1px solid var(--cv-field-line);font-weight:500;cursor:pointer}
+.cv-consent input{margin-top:6px;accent-color:var(--cv-accent);width:18px;height:18px;flex:none}
+.cv-file{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px;border-radius:14px;border:1.5px dashed var(--cv-field-line);background:var(--cv-field)}
+.cv-subhead{grid-column:1/-1;font-size:15px;font-family:var(--f-display);padding-top:10px;margin-top:4px;border-top:1px solid var(--cv-field-line);color:var(--cv-muted);letter-spacing:.03em}
+.cv-nav{display:flex;justify-content:space-between;gap:10px;margin-top:26px;flex-wrap:wrap}
+.cv-err-box{margin-top:14px;padding:12px 14px;border-radius:14px;background:color-mix(in srgb,var(--cv-err) 14%,transparent);color:var(--cv-err);font-weight:500}
+.cv-review{display:grid;gap:14px}
+.cv-review section{padding:16px 18px}
+.cv-review h3{font-size:16px;display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
+.cv-review dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 16px;font-size:14px}
+@media (max-width:600px){.cv-review dl{grid-template-columns:1fr}.cv-review dd{margin-bottom:8px}}
+.cv-review dt{color:var(--cv-muted)}
+.cv-review dd{margin:0;white-space:pre-line;overflow-wrap:anywhere}
+.cv-done{text-align:center;padding:clamp(28px,6vw,64px)}
+.cv-done .ref{display:inline-block;font-family:var(--f-mono);font-size:22px;padding:10px 20px;border-radius:16px;margin:16px 0;user-select:all}
+.cv-closed{padding:22px;text-align:center;color:var(--cv-muted)}
+@media (prefers-reduced-motion:reduce){.cv-bg i{animation:none}}
+
+</style>
+</head>
+<body data-page="careers">
+<div class="cv-bg" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header id="hdr"></header>
+<main id="main" class="cv"></main>
+<footer id="ftr"></footer>
+<script>
+/* ===== RTU Careers — standalone page =====
+   SETTINGS: edit these three lines only. */
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyBQECRkIeTofmoJM9e4iu7TuzjgVMRd9AgIHnmCKbzZsvuGHSHVEvsQBbsnQPiyVEcTQ/exec';                 // Google Apps Script web app URL (ends with /exec)
+const OPEN_ROLES = null;              // null = all roles open, or e.g. ['fullstack','designer','video']
+const CONTACT = { whatsapp: '', email: '' }; // shown on the thank-you screen (optional)
+/* ======================================== */
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LS = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } }, del(k) { try { localStorage.removeItem(k); } catch (e) { } } };
+const debounce = (fn, ms) => { let tm; return (...a) => { clearTimeout(tm); tm = setTimeout(() => fn(...a), ms); }; };
+let LANG = LS.get('rtu_cv_lang', 'ar');
+const L = (ar, en) => LANG === 'ar' ? ar : (en || ar);
+const fmtNum = n => new Intl.NumberFormat(LANG === 'ar' ? 'ar-EG' : 'en-US').format(n);
+const fmtBytes = b => b > 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.round(b / 1024) + ' KB';
+const T = { of: ['من', 'of'], prev: ['السابق', 'Back'], next: ['التالي', 'Next'], edit: ['تعديل', 'Edit'], del: ['حذف', 'Remove'] };
+const t = k => T[k] ? L(T[k][0], T[k][1]) : k;
+const nowISO = () => new Date().toISOString();
+
+const CV_GROUPS = { tech: ['التقنية', 'Technology'], creative: ['الإبداع والتسويق', 'Creative & marketing'], business: ['المبيعات وخدمة العملاء', 'Sales & client success'], any: ['تقديم عام', 'General'] };
+const CV_ROLES = [
+  { k: 'fullstack', g: 'tech', ar: 'مطوّر Full-Stack بالـ AI', en: 'AI-first full-stack developer', dAr: 'تبني مواقع وأنظمة ERP كاملة بأدوات زي Claude Code وCursor، وتراجع كل سطر قبل ما يتنشر.', dEn: 'Build complete sites and ERP systems with tools like Claude Code and Cursor, and review every line before it ships.' },
+  { k: 'mobile', g: 'tech', ar: 'مطوّر تطبيقات موبايل', en: 'Mobile app developer', dAr: 'تطبيقات أندرويد وآيفون مربوطة بأنظمة العملاء، بتتبني بمساعدة الـ AI.', dEn: 'Android and iOS apps connected to client systems, built with AI assistance.' },
+  { k: 'automation', g: 'tech', ar: 'مهندس أتمتة وAI Agents', en: 'Automation & AI agents engineer', dAr: 'تربط الأدوات ببعض وتبني Agents بتشيل الشغل المتكرر من على العملاء.', dEn: 'Connect tools and build agents that take repetitive work off clients\' hands.' },
+  { k: 'qa', g: 'tech', ar: 'مراجع جودة واختبار (QA)', en: 'QA & AI output reviewer', dAr: 'آخر خط دفاع: تختبر الأنظمة وتراجع مخرجات الـ AI قبل ما توصل للعميل.', dEn: 'The last line of defense: test systems and review AI output before it reaches a client.' },
+  { k: 'support', g: 'business', ar: 'أخصائي تطبيق ودعم أنظمة', en: 'Implementation & support specialist', dAr: 'تنقل بيانات العميل للسيستم، وتدرّب فريقه، وترد على مشاكله.', dEn: 'Migrate client data, train their team, and solve their issues.' },
+  { k: 'designer', g: 'creative', ar: 'مصمم جرافيك بالـ AI', en: 'AI graphic designer', dAr: 'سوشيال ميديا وإعلانات وهويات بصرية، بتوليد الصور والتعديل الاحترافي عليها.', dEn: 'Social media, ads and brand identities, using image generation plus professional finishing.' },
+  { k: 'uiux', g: 'creative', ar: 'مصمم UI/UX', en: 'UI/UX designer', dAr: 'تصمم شاشات الأنظمة والمواقع والتطبيقات بحيث تبقى سهلة لموظف عادي.', dEn: 'Design system, web and app screens that an ordinary employee finds easy.' },
+  { k: 'video', g: 'creative', ar: 'مونتير وموشن بالـ AI', en: 'AI video editor & motion designer', dAr: 'ريلز وإعلانات وفيديوهات منتجات بأدوات توليد الفيديو والصوت والمونتاج.', dEn: 'Reels, ads and product videos using video and voice generation plus editing.' },
+  { k: 'content', g: 'creative', ar: 'كاتب محتوى', en: 'Content writer', dAr: 'بوستات وإعلانات وسكريبتات ومحتوى مواقع، بالعربي المصري والفصحى والإنجليزي.', dEn: 'Posts, ads, scripts and website copy in Egyptian Arabic, MSA and English.' },
+  { k: 'ads', g: 'creative', ar: 'أخصائي إعلانات ممولة', en: 'Paid ads specialist', dAr: 'تدير حملات ميتا وجوجل وتيك توك بأهداف واضحة وتقارير بالأرقام.', dEn: 'Run Meta, Google and TikTok campaigns with clear goals and numeric reports.' },
+  { k: 'print', g: 'creative', ar: 'مصمم كتب وملازم ومطبوعات', en: 'Book & print designer', dAr: 'تنسيق ملازم وكتب، وأغلفة ومنيوهات وكتالوجات جاهزة للمطبعة.', dEn: 'Layout for booklets and books, plus covers, menus and catalogs ready for press.' },
+  { k: 'sales', g: 'business', ar: 'مسؤول مبيعات وعلاقات عملاء', en: 'Sales & account manager', dAr: 'تقابل أصحاب الشركات، تفهم مشكلتهم، وتقفل الصفقة وتتابعها.', dEn: 'Meet business owners, understand their problem, close the deal and follow up.' },
+  { k: 'general', g: 'any', ar: 'تقديم عام', en: 'General application', dAr: 'مش لاقي وظيفتك؟ قدّم وقولنا بتعرف تعمل إيه بالـ AI.', dEn: 'Don\'t see your role? Apply and tell us what you can do with AI.' }
+];
+const cvRole = k => CV_ROLES.find(r => r.k === k);
+
+/* ---------- schema ---------- */
+const F = (id, t, ar, en, o = {}) => Object.assign({ id, t, ar, en }, o);
+const O = (...a) => a; // [value, ar, en]
+const AI_TOOLS = ['ChatGPT', 'Claude', 'Gemini', 'Microsoft Copilot', 'GitHub Copilot', 'Cursor', 'Claude Code', 'Perplexity', 'Midjourney', 'Adobe Firefly', 'Ideogram', 'Flux / Stable Diffusion', 'Runway', 'Kling', 'Google Veo', 'Sora', 'ElevenLabs', 'HeyGen', 'CapCut AI', 'Canva AI', 'Notion AI', 'n8n', 'Make', 'Zapier'].map(x => [x, x, x]);
+const GOVS = ['القاهرة', 'الجيزة', 'الإسكندرية', 'القليوبية', 'الشرقية', 'الدقهلية', 'الغربية', 'المنوفية', 'البحيرة', 'كفر الشيخ', 'دمياط', 'بورسعيد', 'الإسماعيلية', 'السويس', 'الفيوم', 'بني سويف', 'المنيا', 'أسيوط', 'سوهاج', 'قنا', 'الأقصر', 'أسوان', 'البحر الأحمر', 'مطروح', 'شمال سيناء', 'جنوب سيناء', 'الوادي الجديد', 'خارج مصر'];
+
+const CV_COMMON_SCEN = [
+  F('aiProject', 'textarea', 'احكيلنا عن مشروع سلّمته واعتمدت فيه على الـ AI بشكل أساسي: كان إيه، استخدمت أنهي أدوات، وإيه اللي عملته إنت بنفسك؟', 'Describe a project you delivered relying mainly on AI: what it was, which tools you used, and what you did yourself.', { req: 1, min: 80, full: 1 }),
+  F('prompt', 'textarea', 'عميل جديد عنده مطعم. اكتب أول برومبت هتستخدمه عشان تبدأ شغلك معاه في تخصصك (موقع، حملة، منيو، فيديو، أو عرض سعر).', 'A new client owns a restaurant. Write the first prompt you would use to start work in your field (site, campaign, menu, video or quote).', { req: 1, min: 60, full: 1, mono: 1, hint: ['اكتب البرومبت نفسه زي ما هتحطه في الأداة.', 'Write the actual prompt as you would paste it.'] }),
+  F('verify', 'textarea', 'الـ AI بيغلط أحيانًا وهو واثق. إزاي بتتأكد إن الشغل اللي طالع منه صح قبل ما يوصل للعميل؟', 'AI is sometimes confidently wrong. How do you check its output before it reaches a client?', { req: 1, min: 60, full: 1 }),
+  F('deadline', 'textarea', 'قدامك ساعتين على تسليم، والأداة اللي بتعتمد عليها وقفت أو بتطلع نتايج سيئة. هتعمل إيه؟', 'You have two hours to a deadline and your main tool is down or producing bad results. What do you do?', { req: 1, min: 40, full: 1 }),
+  F('privacy', 'textarea', 'إيه البيانات اللي عمرك ما تحطها في أداة AI عامة؟ وإزاي بتشتغل على بيانات عميل حساسة؟', 'What data would you never put into a public AI tool? How do you work with sensitive client data?', { req: 1, min: 40, full: 1 }),
+  F('learning', 'textarea', 'إيه آخر أداة أو ميزة AI اتعلمتها؟ وبتتابع الجديد منين؟', 'What is the latest AI tool or feature you learned, and where do you follow what\'s new?', { req: 1, min: 20, full: 1 }),
+  F('copyright', 'textarea', 'إزاي بتتجنب مشاكل حقوق الملكية في الصور أو النصوص أو الأكواد المتولدة بالـ AI؟', 'How do you avoid copyright problems with AI-generated images, text or code?', { full: 1 })
+];
+const CV_GROUP_EXTRA = {
+  tech: [
+    F('codeLinks', 'url', 'رابط GitHub أو أعمال برمجية منشورة', 'GitHub or published work link', { req: 1, full: 1, ph: 'https://github.com/…' }),
+    F('stack', 'checks', 'بتشتغل بأنهي تقنيات؟', 'Which technologies do you work with?', { req: 1, full: 1, opts: ['PHP', 'Laravel', 'JavaScript', 'TypeScript', 'React', 'Vue', 'Node.js', 'Python', 'Flutter', 'React Native', 'MySQL', 'PostgreSQL', 'Firebase', 'Git', 'Docker', 'Linux / VPS'].map(x => [x, x, x]) }),
+    F('aiCodingFlow', 'textarea', 'لما تبني ميزة جديدة بأداة زي Claude Code أو Cursor: إزاي بتقسم المهمة، وإزاي بتراجع الكود قبل ما تعتمده؟', 'When building a feature with a tool like Claude Code or Cursor: how do you split the task, and how do you review the code before accepting it?', { req: 1, min: 60, full: 1 }),
+    F('security', 'textarea', 'إيه أهم ٣ حاجات بتراجعها في كود كتبه الـ AI قبل ما يتنشر على سيرفر عميل؟', 'What are the three things you check first in AI-written code before it goes on a client\'s server?', { req: 1, min: 40, full: 1 })
+  ],
+  creative: [
+    F('portfolio', 'url', 'رابط البورتفوليو (Behance أو Drive أو Instagram)', 'Portfolio link (Behance, Drive or Instagram)', { req: 1, full: 1, ph: 'https://' }),
+    F('creativeTools', 'checks', 'برامج التصميم والمونتاج اللي بتستخدمها', 'Design and editing software you use', { full: 1, opts: ['Photoshop', 'Illustrator', 'InDesign', 'Figma', 'Premiere Pro', 'After Effects', 'DaVinci Resolve', 'CapCut', 'Canva', 'Lightroom'].map(x => [x, x, x]) }),
+    F('aiCreativeFlow', 'textarea', 'إزاي بتوصل من فكرة العميل لشغل نهائي بالـ AI؟ إيه اللي بتعمله بإيدك وإيه اللي بتسيبه للأداة؟', 'How do you go from a client\'s idea to finished work with AI? What do you do by hand and what do you leave to the tool?', { req: 1, min: 60, full: 1 }),
+    F('brandConsistency', 'textarea', 'إزاي بتحافظ على هوية العميل (ألوان، خطوط، شخصيات، أسلوب) ثابتة في صور أو فيديوهات أو نصوص متولدة بالـ AI؟', 'How do you keep a client\'s identity (colors, fonts, characters, tone) consistent across AI-generated work?', { req: 1, min: 40, full: 1 })
+  ],
+  business: [
+    F('salesYears', 'select', 'خبرتك في التعامل المباشر مع العملاء', 'Experience dealing directly with clients', { req: 1, opts: [O('0', 'مافيش', 'None'), O('1', 'أقل من سنة', 'Under a year'), O('2', '١-٣ سنين', '1–3 years'), O('4', 'أكتر من ٣ سنين', '3+ years')] }),
+    F('crm', 'text', 'استخدمت CRM أو برامج متابعة عملاء قبل كده؟ إيه هي؟', 'Have you used a CRM or client follow-up tool? Which?', {}),
+    F('aiBusiness', 'textarea', 'هتستخدم الـ AI إزاي في شغلك اليومي مع العملاء (عروض أسعار، متابعة، ردود، تقارير)؟', 'How would you use AI in daily client work (quotes, follow-ups, replies, reports)?', { req: 1, min: 60, full: 1 }),
+    F('pitch', 'textarea', 'صاحب جيم بيقولك: "أنا ماشي بالكشكول ومش محتاج سيستم". هترد تقول إيه؟', 'A gym owner says: "I run everything on paper and don\'t need a system." What do you say?', { req: 1, min: 60, full: 1 })
+  ],
+  any: [
+    F('portfolio', 'url', 'رابط لأعمالك (أي منصة)', 'Link to your work (any platform)', { full: 1, ph: 'https://' }),
+    F('canDo', 'textarea', 'إيه الشغل اللي تقدر تقدمه لـ RTU بالـ AI؟', 'What work can you deliver for RTU with AI?', { req: 1, min: 60, full: 1 })
+  ]
+};
+const CV_ROLE_EXTRA = {
+  mobile: [F('storeLink', 'url', 'نشرت تطبيق على Google Play أو App Store قبل كده؟ ابعت اللينك', 'Published an app on Google Play or the App Store? Share the link', { full: 1 })],
+  automation: [F('automationCase', 'textarea', 'اوصف أتمتة عملتها بـ n8n أو Make أو Zapier أو بالكود: كانت بتعمل إيه، ووفّرت قد إيه؟', 'Describe an automation you built with n8n, Make, Zapier or code: what it did and what it saved.', { req: 1, min: 60, full: 1 })],
+  qa: [F('loginTests', 'textarea', 'اكتب أهم الحالات اللي هتختبرها في صفحة تسجيل دخول.', 'List the main cases you would test on a login page.', { req: 1, min: 60, full: 1 })],
+  support: [F('erpExp', 'textarea', 'اشتغلت قبل كده على أنظمة ERP أو برامج حسابات أو مخازن؟ إيه هي، وكان دورك إيه؟', 'Have you worked with ERP, accounting or inventory software? Which, and what was your role?', { req: 1, min: 30, full: 1 }),
+    F('angryClient', 'textarea', 'عميل بيكلمك متضايق إن السيستم "مش شغال" ومش عارف يوصف المشكلة. هتتصرف إزاي؟', 'An upset client says the system "doesn\'t work" and can\'t describe the problem. How do you handle it?', { req: 1, min: 40, full: 1 })],
+  uiux: [F('uxCritique', 'textarea', 'اختار تطبيق بتستخدمه كل يوم: إيه أكتر مشكلة في تجربة استخدامه، وهتحلها إزاي؟', 'Pick an app you use daily: what is its biggest usability problem, and how would you fix it?', { req: 1, min: 60, full: 1 })],
+  video: [F('reel', 'url', 'رابط ريل أو فيديو من شغلك', 'Link to a reel or video of your work', { req: 1, full: 1 })],
+  content: [F('caption', 'textarea', 'اكتب كابشن قصير لإعلان عن نظام حضور وانصراف لشركة صغيرة.', 'Write a short ad caption for an attendance system aimed at small companies.', { req: 1, min: 40, full: 1 })],
+  ads: [F('adsBudget', 'textarea', 'أكبر ميزانية إعلانات أدرتها في الشهر كانت قد إيه، وكانت النتيجة إيه بالأرقام؟', 'What was the largest monthly ad budget you managed, and what were the results in numbers?', { req: 1, min: 30, full: 1 })],
+  print: [F('printPrep', 'textarea', 'بتجهّز ملف للطباعة إزاي؟ (المقاس، الهوامش، النزيف، CMYK، الدقة)', 'How do you prepare a file for print? (size, margins, bleed, CMYK, resolution)', { req: 1, min: 40, full: 1 })]
+};
+
+const CV_STEPS = [
+  { k: 'personal', ar: 'بياناتك', en: 'About you', dAr: 'بيانات التواصل الأساسية.', dEn: 'Basic contact details.', f: [
+    F('fullName', 'text', 'الاسم بالكامل', 'Full name', { req: 1, ac: 'name' }),
+    F('phone', 'tel', 'رقم الموبايل / واتساب', 'Mobile / WhatsApp', { req: 1, ac: 'tel', ltr: 1 }),
+    F('email', 'email', 'البريد الإلكتروني', 'Email', { req: 1, ac: 'email', ltr: 1 }),
+    F('city', 'text', 'المحافظة', 'Governorate / city', { req: 1, list: GOVS }),
+    F('linkedin', 'url', 'رابط LinkedIn', 'LinkedIn profile', { ph: 'https://linkedin.com/in/…' }),
+    F('military', 'select', 'الموقف من التجنيد', 'Military service status', { hint: ['للذكور داخل مصر.', 'For male applicants in Egypt.'], opts: [O('na', 'لا ينطبق', 'Not applicable'), O('done', 'أدّى الخدمة', 'Completed'), O('exempt', 'معفى', 'Exempt'), O('postponed', 'مؤجل', 'Postponed')] })
+  ] },
+  { k: 'role', ar: 'الوظيفة', en: 'The role', dAr: 'الوظيفة وشكل الشغل اللي يناسبك.', dEn: 'The role and how you want to work.', f: [
+    F('role', 'role', 'الوظيفة اللي بتقدّم عليها', 'Role you are applying for', { req: 1, full: 1 }),
+    F('employment', 'seg', 'نوع الشغل', 'Employment type', { req: 1, full: 1, opts: [O('full', 'دوام كامل', 'Full-time'), O('part', 'دوام جزئي', 'Part-time'), O('freelance', 'فريلانس بالمشروع', 'Freelance per project'), O('intern', 'تدريب', 'Internship')] }),
+    F('workMode', 'seg', 'مكان الشغل', 'Work location', { req: 1, full: 1, opts: [O('onsite', 'من المقر', 'On-site'), O('remote', 'عن بُعد', 'Remote'), O('hybrid', 'هجين', 'Hybrid')] }),
+    F('start', 'select', 'تقدر تبدأ إمتى؟', 'When can you start?', { req: 1, opts: [O('now', 'فورًا', 'Immediately'), O('2w', 'خلال أسبوعين', 'Within two weeks'), O('1m', 'خلال شهر', 'Within a month'), O('later', 'أكتر من شهر', 'More than a month')] }),
+    F('status', 'select', 'وضعك الحالي', 'Current status', { req: 1, opts: [O('employed', 'بشتغل حاليًا', 'Employed'), O('freelancer', 'فريلانسر', 'Freelancer'), O('looking', 'بدوّر على شغل', 'Looking for work'), O('student', 'طالب', 'Student')] }),
+    F('salary', 'number', 'المرتب المتوقع في الشهر (جنيه)', 'Expected monthly pay (EGP)', { hint: ['للفريلانس: اكتب سعرك التقريبي للمشروع أو للساعة في الملاحظات.', 'Freelancers: give your rough project or hourly rate in the notes.'] }),
+    F('salaryNeg', 'checks', ' ', ' ', { opts: [O('yes', 'قابل للتفاوض', 'Negotiable')] })
+  ] },
+  { k: 'background', ar: 'الخبرة', en: 'Background', dAr: 'دراستك وخبرتك السابقة.', dEn: 'Education and experience.', f: [
+    F('education', 'select', 'أعلى مؤهل', 'Highest qualification', { req: 1, opts: [O('school', 'ثانوي أو ما يعادله', 'High school or equivalent'), O('diploma', 'دبلوم أو معهد', 'Diploma'), O('bachelor', 'بكالوريوس / ليسانس', 'Bachelor\'s'), O('master', 'ماجستير أو أعلى', 'Master\'s or higher'), O('self', 'تعلّم ذاتي', 'Self-taught')] }),
+    F('major', 'text', 'التخصص', 'Field of study', {}),
+    F('gradYear', 'number', 'سنة التخرج', 'Graduation year', { ph: '2024' }),
+    F('years', 'select', 'سنين الخبرة في المجال', 'Years of experience in the field', { req: 1, opts: [O('0', 'أقل من سنة', 'Under a year'), O('1', '١-٢ سنة', '1–2 years'), O('3', '٣-٥ سنين', '3–5 years'), O('6', 'أكتر من ٥ سنين', '5+ years')] }),
+    F('lastRole', 'text', 'آخر وظيفة أو مشروع (المسمى والجهة)', 'Last role or project (title and company)', { full: 1 }),
+    F('summary', 'textarea', 'اوصف خبرتك في ٣ لـ ٥ سطور', 'Describe your experience in 3–5 lines', { req: 1, min: 60, full: 1 })
+  ] },
+  { k: 'ai', ar: 'مهاراتك في الـ AI', en: 'Your AI skills', dAr: 'شغلنا كله قايم على الـ AI، فالقسم ده أهم قسم في الطلب.', dEn: 'All our work runs on AI, so this is the most important section.', f: [
+    F('aiTools', 'checks', 'الأدوات اللي بتستخدمها فعلًا في شغلك', 'Tools you actually use for work', { req: 1, full: 1, opts: AI_TOOLS }),
+    F('aiOther', 'text', 'أدوات تانية', 'Other tools', { full: 1 }),
+    F('aiHours', 'seg', 'بتستخدم أدوات الـ AI قد إيه في اليوم؟', 'How long do you use AI tools per day?', { req: 1, full: 1, opts: [O('lt1', 'أقل من ساعة', 'Under 1h'), O('1-3', '١-٣ ساعات', '1–3h'), O('3-6', '٣-٦ ساعات', '3–6h'), O('6+', 'أكتر من ٦', '6h+')] }),
+    F('aiPaid', 'seg', 'مشترك في أدوات AI مدفوعة؟', 'Do you pay for any AI tools?', { req: 1, opts: [O('yes', 'أيوه', 'Yes'), O('no', 'لأ', 'No')] }),
+    F('aiApi', 'seg', 'استخدمت API لأي نموذج AI؟', 'Have you used an AI model\'s API?', { req: 1, opts: [O('no', 'لأ', 'No'), O('tried', 'جربت', 'Tried it'), O('prod', 'في مشاريع حقيقية', 'In real projects')] }),
+    { id: '_rh', t: 'subhead', ar: 'قيّم نفسك من ١ لـ ٥ (١ = مبتدئ، ٥ = محترف)', en: 'Rate yourself from 1 to 5 (1 = beginner, 5 = expert)' },
+    F('r_prompt', 'rate', 'كتابة البرومبتات وتوجيه النموذج', 'Writing prompts and steering the model', { req: 1, full: 1 }),
+    F('r_code', 'rate', 'البرمجة بمساعدة الـ AI', 'AI-assisted coding', { req: 1, full: 1 }),
+    F('r_image', 'rate', 'توليد الصور والتصميم بالـ AI', 'AI image generation and design', { req: 1, full: 1 }),
+    F('r_video', 'rate', 'توليد الفيديو والصوت', 'AI video and voice generation', { req: 1, full: 1 }),
+    F('r_write', 'rate', 'الكتابة والمحتوى بالـ AI', 'AI writing and content', { req: 1, full: 1 }),
+    F('r_auto', 'rate', 'الأتمتة والـ Agents', 'Automation and agents', { req: 1, full: 1 }),
+    F('r_verify', 'rate', 'مراجعة مخرجات الـ AI واكتشاف أخطاءه', 'Reviewing AI output and catching its mistakes', { req: 1, full: 1 })
+  ] },
+  { k: 'scenarios', ar: 'أسئلة عملية', en: 'Practical questions', dAr: 'مافيش إجابة صح واحدة. عايزين نشوف طريقة تفكيرك.', dEn: 'There is no single right answer. We want to see how you think.', f: [] },
+  { k: 'life', ar: 'إنت برّه الشاشة', en: 'Beyond the screen', dAr: 'عايزين نعرفك كإنسان: بتحب تعمل إيه، ومهاراتك وأنشطتك بعيد عن الكمبيوتر.', dEn: 'We want to know you as a person: what you love doing, and your skills and activities away from the computer.', f: [
+    F('favorite', 'textarea', 'إيه أكتر حاجة بتحب تعملها، ولما بتعملها بتنسى الوقت؟', 'What do you love doing most, the thing that makes you lose track of time?', { req: 1, min: 30, full: 1 }),
+    F('offSkills', 'checks', 'مهارات أو هوايات عندك بعيد عن الكمبيوتر', 'Skills or hobbies you have away from the computer', { full: 1, opts: [O('sport', 'رياضة', 'Sports'), O('reading', 'قراءة', 'Reading'), O('photo', 'تصوير', 'Photography'), O('drawing', 'رسم وخط', 'Drawing & calligraphy'), O('music', 'موسيقى أو إنشاد', 'Music or singing'), O('cooking', 'طبخ', 'Cooking'), O('writing', 'كتابة', 'Writing'), O('volunteer', 'تطوع', 'Volunteering'), O('travel', 'سفر واستكشاف', 'Travel & exploring'), O('chess', 'شطرنج وألعاب ذهنية', 'Chess & strategy games'), O('crafts', 'أشغال يدوية', 'Handcrafts'), O('teaching', 'تعليم وشرح', 'Teaching & explaining'), O('speaking', 'خطابة وتقديم', 'Public speaking'), O('leading', 'قيادة فرق', 'Leading teams'), O('events', 'تنظيم فعاليات', 'Organising events'), O('quran', 'حفظ قرآن', 'Quran memorisation')] }),
+    F('offOther', 'text', 'حاجة تانية مش في القايمة', 'Something not on the list', { full: 1 }),
+    F('offSkillDetail', 'textarea', 'اختار مهارة واحدة برّه الكمبيوتر بتفتخر بيها: اتعلمتها إزاي، ووصلت فيها لفين؟', 'Pick one off-screen skill you are proud of: how did you learn it, and how far have you taken it?', { req: 1, min: 30, full: 1 }),
+    F('activities', 'textarea', 'أنشطة أو مبادرات شاركت فيها (تطوع، فرق طلابية، مسابقات، نوادي، فعاليات)، وكان دورك إيه؟', 'Activities or initiatives you took part in (volunteering, student teams, competitions, clubs, events), and your role?', { full: 1 }),
+    F('achievement', 'textarea', 'إنجاز شخصي بعيد عن الشغل فخور بيه', 'A personal achievement outside work you are proud of', { full: 1 }),
+    F('otherLangs', 'text', 'لغات تانية غير العربي والإنجليزي', 'Languages besides Arabic and English', { full: 1 })
+  ] },
+  { k: 'setup', ar: 'بيئة الشغل والمرفقات', en: 'Setup & files', dAr: 'أدواتك، وليه RTU، والسيرة الذاتية.', dEn: 'Your setup, why RTU, and your CV.', f: [
+    F('laptop', 'select', 'عندك لابتوب أو كمبيوتر مناسب للشغل؟', 'Do you have a suitable laptop or computer?', { req: 1, opts: [O('good', 'أيوه، قوي', 'Yes, powerful'), O('ok', 'أيوه، متوسط', 'Yes, average'), O('no', 'لأ', 'No')] }),
+    F('laptopSpecs', 'text', 'مواصفاته باختصار', 'Its specs, briefly', { ph: 'i7 · 16GB RAM · RTX 3060' }),
+    F('internet', 'select', 'الإنترنت عندك', 'Your internet connection', { req: 1, opts: [O('stable', 'ثابت وسريع', 'Stable and fast'), O('ok', 'مقبول', 'Acceptable'), O('weak', 'ضعيف', 'Weak')] }),
+    F('english', 'select', 'مستوى الإنجليزي', 'English level', { req: 1, opts: [O('basic', 'مبتدئ', 'Basic'), O('mid', 'متوسط', 'Intermediate'), O('good', 'جيد', 'Good'), O('fluent', 'ممتاز', 'Fluent')] }),
+    F('whyRTU', 'textarea', 'ليه عايز تشتغل في RTU، وإيه اللي هتضيفه؟', 'Why do you want to work at RTU, and what will you add?', { req: 1, min: 40, full: 1 }),
+    F('source', 'select', 'عرفت عننا منين؟', 'How did you hear about us?', { req: 1, opts: [O('facebook', 'فيسبوك', 'Facebook'), O('linkedin', 'لينكدإن', 'LinkedIn'), O('instagram', 'إنستجرام', 'Instagram'), O('site', 'موقع RTU', 'RTU website'), O('ref', 'ترشيح من حد', 'Referral'), O('other', 'حاجة تانية', 'Other')] }),
+    F('referral', 'text', 'اسم اللي رشّحك', 'Who referred you?', { show: a => a.source === 'ref' }),
+    F('cv', 'file', 'السيرة الذاتية (PDF أو Word، لحد ٣ ميجا)', 'CV (PDF or Word, up to 3 MB)', { full: 1 }),
+    F('note', 'textarea', 'حاجة تانية حابب تقولها؟', 'Anything else you\'d like to add?', { full: 1 }),
+    F('ackTask', 'consent', 'فاهم إن التقييم بيشمل مهمة عملية قصيرة بأدوات الـ AI قبل المقابلة.', 'I understand the process includes a short practical AI task before the interview.', { req: 1, full: 1 }),
+    F('consent', 'consent', 'أقر إن البيانات دي صحيحة، وموافق إن RTU تحتفظ بيها لغرض التوظيف بس.', 'I confirm this information is accurate and agree that RTU keeps it for hiring purposes only.', { req: 1, full: 1 })
+  ] },
+  { k: 'review', ar: 'مراجعة وإرسال', en: 'Review & send', dAr: 'راجع إجاباتك قبل الإرسال.', dEn: 'Check your answers before sending.', f: [] }
+];
+function cvStepFields(i, a) {
+  const s = CV_STEPS[i];
+  if (s.k !== 'scenarios') return s.f;
+  const r = cvRole(a.role) || {};
+  const g = r.g || 'any';
+  const out = [...CV_COMMON_SCEN];
+  if (CV_GROUP_EXTRA[g]) out.push({ id: '_gh', t: 'subhead', ar: 'أسئلة خاصة بـ' + L(CV_GROUPS[g][0], CV_GROUPS[g][1]), en: 'Questions for ' + CV_GROUPS[g][1] }, ...CV_GROUP_EXTRA[g]);
+  if (CV_ROLE_EXTRA[r.k]) out.push(...CV_ROLE_EXTRA[r.k]);
+  return out;
+}
+function cvAllFields(a) { const out = []; CV_STEPS.forEach((s, i) => cvStepFields(i, a).forEach(f => { if (f.t !== 'subhead') out.push(Object.assign({ step: i }, f)); })); return out; }
+function cvAiScore(a) { const ks = ['r_prompt', 'r_code', 'r_image', 'r_video', 'r_write', 'r_auto', 'r_verify'], v = ks.map(k => +a[k] || 0).filter(Boolean); return v.length ? Math.round(v.reduce((s, x) => s + x, 0) / v.length * 10) / 10 : 0; }
+function cvValueText(f, v) {
+  if (v === undefined || v === null || v === '' || (Array.isArray(v) && !v.length)) return '—';
+  if (f.t === 'role') { const r = cvRole(v); return r ? L(r.ar, r.en) : v; }
+  if (f.t === 'checks' || f.t === 'seg' || f.t === 'select') { const arr = Array.isArray(v) ? v : [v]; return arr.map(x => { const o = (f.opts || []).find(o => o[0] === x); return o ? L(o[1], o[2]) : x; }).join('، '); }
+  if (f.t === 'rate') return v + ' / 5';
+  if (f.t === 'consent') return v ? L('موافق', 'Agreed') : '—';
+  if (f.t === 'file') return v.name ? v.name + ' (' + fmtBytes(v.size) + ')' : '—';
+  if (f.t === 'number' && f.id === 'salary') return fmtNum(+v) + ' ' + L('ج.م', 'EGP');
+  return String(v);
+}
+
+
+
+const cvOpenRolesSA = () => CV_ROLES.filter(r => r.k === 'general' || !OPEN_ROLES || OPEN_ROLES.includes(r.k));
+/* Short column titles for the Google Sheet */
+const HEAD = { fullName: 'الاسم', phone: 'الموبايل', email: 'الإيميل', city: 'المحافظة', linkedin: 'LinkedIn', military: 'التجنيد', role: 'الوظيفة', employment: 'نوع الشغل', workMode: 'مكان الشغل', start: 'يبدأ إمتى', status: 'الوضع الحالي', salary: 'المرتب المتوقع', salaryNeg: 'قابل للتفاوض', education: 'المؤهل', major: 'التخصص', gradYear: 'سنة التخرج', years: 'سنين الخبرة', lastRole: 'آخر وظيفة', summary: 'ملخص الخبرة', aiTools: 'أدوات الـ AI', aiOther: 'أدوات تانية', aiHours: 'ساعات AI يوميًا', aiPaid: 'أدوات مدفوعة', aiApi: 'استخدام API', r_prompt: 'تقييم: البرومبت', r_code: 'تقييم: البرمجة', r_image: 'تقييم: الصور', r_video: 'تقييم: الفيديو والصوت', r_write: 'تقييم: الكتابة', r_auto: 'تقييم: الأتمتة', r_verify: 'تقييم: المراجعة', aiProject: 'مشروع بالـ AI', prompt: 'برومبت المطعم', verify: 'التحقق من المخرجات', deadline: 'موقف الساعتين', privacy: 'خصوصية البيانات', learning: 'آخر حاجة اتعلمها', copyright: 'حقوق الملكية', codeLinks: 'GitHub', stack: 'التقنيات', aiCodingFlow: 'طريقة البرمجة بالـ AI', security: 'مراجعة كود الـ AI', portfolio: 'البورتفوليو', creativeTools: 'برامج التصميم', aiCreativeFlow: 'طريقة الشغل الإبداعي', brandConsistency: 'ثبات الهوية', salesYears: 'خبرة العملاء', crm: 'CRM', aiBusiness: 'الـ AI مع العملاء', pitch: 'رد صاحب الجيم', canDo: 'يقدر يقدم إيه', storeLink: 'لينك التطبيق', automationCase: 'أتمتة عملها', loginTests: 'اختبار تسجيل الدخول', erpExp: 'خبرة ERP', angryClient: 'العميل المتضايق', uxCritique: 'نقد تجربة استخدام', reel: 'لينك الريل', caption: 'الكابشن', adsBudget: 'ميزانية الإعلانات', printPrep: 'تجهيز الطباعة', favorite: 'أكتر حاجة بيحبها', offSkills: 'هوايات ومهارات برّه الكمبيوتر', offOther: 'هوايات تانية', offSkillDetail: 'مهارة بيفتخر بيها', activities: 'أنشطة شارك فيها', achievement: 'إنجاز شخصي', otherLangs: 'لغات تانية', laptop: 'اللابتوب', laptopSpecs: 'مواصفات اللابتوب', internet: 'الإنترنت', english: 'الإنجليزي', whyRTU: 'ليه RTU', source: 'عرف منين', referral: 'رشّحه مين', note: 'ملاحظات', ackTask: 'موافق على المهمة', consent: 'موافقة البيانات' };
+const arText = (f, v) => { const keep = LANG; LANG = 'ar'; const s = cvValueText(f, v); LANG = keep; return s; };
+
+/* ---------- state ---------- */
+const S = { step: 0, max: 0, a: {}, done: null, cv: null, startedAt: Date.now() };
+const DRAFT = 'rtu_cv_draft_v1';
+function loadDraft() { const d = LS.get(DRAFT, null); if (d && d.a) { S.a = d.a; S.step = Math.min(d.step || 0, CV_STEPS.length - 1); S.max = Math.max(S.step, d.max || 0); } }
+const saveDraft = debounce(() => { const a = Object.assign({}, S.a); delete a.cv; LS.set(DRAFT, { a, step: S.step, max: S.max }); const s = $('#cvSaved'); if (s) s.textContent = L('اتحفظ على جهازك ', 'Saved on this device ') + new Date().toTimeString().slice(0, 5); }, 500);
+
+/* ---------- fields ---------- */
+function field(f) {
+  const a = S.a, v = a[f.id], id = 'cv_' + f.id, req = f.req ? '<span class="req" aria-hidden="true">*</span>' : '';
+  if (f.show && !f.show(a)) return '';
+  if (f.t === 'subhead') return `<div class="cv-subhead">${esc(L(f.ar, f.en))}</div>`;
+  const label = `<label for="${id}">${esc(L(f.ar, f.en))}${req}</label>`, q = `<span class="q" id="${id}_q">${esc(L(f.ar, f.en))}${req}</span>`;
+  const hint = f.hint ? `<span class="hint">${esc(L(f.hint[0], f.hint[1]))}</span>` : '';
+  let c = '';
+  switch (f.t) {
+    case 'text': case 'email': case 'tel': case 'url': case 'number':
+      c = label + `<input id="${id}" data-f="${f.id}" type="${f.t}" value="${esc(v || '')}" ${f.ac ? `autocomplete="${f.ac}"` : ''} ${f.ltr || f.t === 'url' || f.t === 'email' ? 'dir="ltr"' : ''} ${f.ph ? `placeholder="${esc(f.ph)}"` : ''} ${f.list ? `list="${id}_l"` : ''} ${f.t === 'number' ? 'inputmode="numeric" min="0"' : ''}>` + (f.list ? `<datalist id="${id}_l">${f.list.map(x => `<option value="${esc(x)}">`).join('')}</datalist>` : ''); break;
+    case 'textarea': { const n = (v || '').trim().length; c = label + `<textarea id="${id}" data-f="${f.id}" ${f.mono ? 'dir="auto" class="mono"' : ''}>${esc(v || '')}</textarea>` + (f.min ? `<span class="cnt ${n >= f.min ? 'ok' : ''}" data-cnt="${f.id}">${fmtNum(n)} / ${fmtNum(f.min)}+</span>` : ''); break; }
+    case 'select': c = label + `<select id="${id}" data-f="${f.id}"><option value="">${L('اختار…', 'Choose…')}</option>${f.opts.map(o => `<option value="${o[0]}" ${v === o[0] ? 'selected' : ''}>${esc(L(o[1], o[2]))}</option>`).join('')}</select>`; break;
+    case 'role': c = label + `<select id="${id}" data-f="${f.id}"><option value="">${L('اختار الوظيفة…', 'Choose a role…')}</option>${['tech', 'creative', 'business', 'any'].map(g => { const rs = cvOpenRolesSA().filter(r => r.g === g); return rs.length ? `<optgroup label="${esc(L(CV_GROUPS[g][0], CV_GROUPS[g][1]))}">${rs.map(r => `<option value="${r.k}" ${v === r.k ? 'selected' : ''}>${esc(L(r.ar, r.en))}</option>`).join('')}</optgroup>` : ''; }).join('')}</select>`; break;
+    case 'seg': c = q + `<div class="cv-seg" role="radiogroup" aria-labelledby="${id}_q" data-seg="${f.id}">${f.opts.map(o => `<button type="button" role="radio" aria-checked="${v === o[0]}" data-v="${o[0]}" class="${v === o[0] ? 'on' : ''}">${esc(L(o[1], o[2]))}</button>`).join('')}</div>`; break;
+    case 'checks': c = (f.ar.trim() ? q : '') + `<div class="cv-chips" role="group" ${f.ar.trim() ? `aria-labelledby="${id}_q"` : ''} data-checks="${f.id}">${f.opts.map(o => `<label><input type="checkbox" value="${esc(o[0])}" ${(v || []).includes(o[0]) ? 'checked' : ''}> ${esc(L(o[1], o[2]))}</label>`).join('')}</div>`; break;
+    case 'rate': return `<div class="cvf full cv-rate-row" data-wrap="${f.id}"><span class="q" id="${id}_q">${esc(L(f.ar, f.en))}${req}</span><div class="cv-rate" role="radiogroup" aria-labelledby="${id}_q" data-rate="${f.id}">${[1, 2, 3, 4, 5].map(n => `<button type="button" role="radio" aria-checked="${+v === n}" data-v="${n}" class="${+v === n ? 'on' : ''}">${n}</button>`).join('')}</div><span class="msg" data-msg="${f.id}"></span></div>`;
+    case 'consent': c = `<label class="cv-consent" for="${id}"><input type="checkbox" id="${id}" data-consent="${f.id}" ${v ? 'checked' : ''}><span>${esc(L(f.ar, f.en))}${req}</span></label>`; break;
+    case 'file': c = q + `<div class="cv-file">${S.cv ? `<span><b>${esc(S.cv.name)}</b> <span class="hint">${fmtBytes(S.cv.size)}</span></span><button type="button" class="gbtn sm" data-rmfile>${t('del')}</button>` : `<input type="file" id="${id}" data-file accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-labelledby="${id}_q">`}</div>${S.a.cv && !S.cv ? `<span class="hint">${L('ارفع الملف تاني، الملفات مش بتتحفظ في المسودة.', 'Please re-attach the file; files are not kept in the draft.')}</span>` : ''}`; break;
+  }
+  return `<div class="cvf ${f.full ? 'full' : ''}" data-wrap="${f.id}">${c}${hint}<span class="msg" data-msg="${f.id}"></span></div>`;
+}
+function validate(fields) {
+  const a = S.a, errs = [];
+  for (const f of fields) {
+    if (f.t === 'subhead' || (f.show && !f.show(a))) continue;
+    const v = a[f.id]; let m = '';
+    const empty = v === undefined || v === null || v === '' || v === false || (Array.isArray(v) && !v.length) || (typeof v === 'string' && !v.trim());
+    if (f.req && empty) m = f.t === 'consent' ? L('لازم توافق عشان تكمل', 'You must agree to continue') : L('السؤال ده مطلوب', 'This question is required');
+    else if (!empty && f.t === 'email' && !/^\S+@\S+\.\S+$/.test(v)) m = L('اكتب بريد صحيح، زي name@gmail.com', 'Enter a valid email, like name@gmail.com');
+    else if (!empty && f.t === 'tel' && String(v).replace(/\D/g, '').length < 8) m = L('الرقم قصير، اكتبه كامل', 'The number looks too short');
+    else if (!empty && f.t === 'url' && !/^(https?:\/\/)?[^\s.]+\.[^\s]{2,}/i.test(v)) m = L('اكتب لينك صحيح', 'Enter a valid link');
+    else if (!empty && f.min && String(v).trim().length < f.min) m = L(`محتاجين تفاصيل أكتر (${fmtNum(f.min)} حرف على الأقل)`, `Please add more detail (at least ${f.min} characters)`);
+    if (m) errs.push([f.id, m]);
+  }
+  return errs;
+}
+function showErrors(errs, msg) {
+  $$('.cvf.bad').forEach(x => x.classList.remove('bad')); $$('[data-msg]').forEach(x => { x.textContent = ''; });
+  errs.forEach(([id, m]) => { const w = $(`[data-wrap="${id}"]`); if (w) w.classList.add('bad'); const e = $(`[data-msg="${id}"]`); if (e) e.textContent = m; });
+  const box = $('#cvErr'); box.hidden = !errs.length && !msg; box.textContent = msg || (errs.length ? L(`فيه ${fmtNum(errs.length)} سؤال محتاج مراجعة.`, `${errs.length} question(s) need attention.`) : '');
+  if (errs.length) { const w = $(`[data-wrap="${errs[0][0]}"]`); if (w) { w.scrollIntoView({ block: 'center', behavior: 'smooth' }); const i = $('input,select,textarea,button', w); if (i) i.focus({ preventScroll: true }); } }
+}
+
+/* ---------- application ---------- */
+function renderApp() {
+  const host = $('#cvApp');
+  if (S.done) {
+    host.innerHTML = `<div class="cv-done"><span class="cv-eyebrow g sm"><span class="led"></span>${L('وصلنا طلبك', 'Application received')}</span>
+      <h2>${L('شكرًا يا', 'Thank you,')} ${esc(S.done.name)}</h2>
+      ${S.done.ref ? `<p class="cv-sub">${L('رقم طلبك، احتفظ بيه لو حبيت تسأل عليه:', 'Your application number, keep it for follow-up:')}</p><div class="ref g sm">${esc(S.done.ref)}</div>` : ''}
+      <p class="cv-sub">${L('هنراجع طلبك، ولو مناسب هنبعتلك المهمة العملية على الواتساب أو الإيميل.', 'We will review it and, if it fits, send you the practical task by WhatsApp or email.')}</p>
+      ${CONTACT.whatsapp || CONTACT.email ? `<p class="cv-sub">${L('للاستفسار:', 'Questions:')} <span dir="ltr" class="sel">${esc([CONTACT.whatsapp, CONTACT.email].filter(Boolean).join(' · '))}</span></p>` : ''}
+      <div class="cv-cta center"><button type="button" class="gbtn" id="cvNew">${L('تقديم على وظيفة تانية', 'Apply for another role')}</button></div></div>`;
+    $('#cvNew').onclick = () => { S.done = null; S.a = Object.assign({}, S.keep); S.step = 0; S.max = 0; S.startedAt = Date.now(); renderApp(); toTop(); };
+    return;
+  }
+  const i = S.step, s = CV_STEPS[i], fields = cvStepFields(i, S.a), last = i === CV_STEPS.length - 1;
+  host.innerHTML = `<nav class="cv-prog g sm" aria-label="${L('خطوات التقديم', 'Application steps')}">${CV_STEPS.map((x, j) => `<button type="button" data-go="${j}" class="${j === i ? 'cur' : j <= S.max ? 'done' : ''}" ${j > S.max ? 'disabled' : ''} ${j === i ? 'aria-current="step"' : ''}><span class="n">${j + 1}</span><span class="t">${esc(L(x.ar, x.en))}</span></button>`).join('')}</nav>
+    <div class="cv-step-head"><div><p class="cv-saved">${L('الخطوة', 'Step')} ${fmtNum(i + 1)} ${t('of')} ${fmtNum(CV_STEPS.length)}</p><h2>${esc(L(s.ar, s.en))}</h2><p>${esc(L(s.dAr, s.dEn))}</p></div><span class="cv-saved" id="cvSaved"></span></div>
+    ${last ? reviewHTML() : `<div class="cv-grid">${fields.map(field).join('')}</div>`}
+    <div class="hp" aria-hidden="true"><label>Website <input id="cv_website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="cv-err-box" id="cvErr" role="alert" hidden></div>
+    <div class="cv-nav">${i > 0 ? `<button type="button" class="gbtn" id="cvBack">${t('prev')}</button>` : '<span></span>'}${last ? `<button type="button" class="gbtn primary" id="cvSend">${L('إرسال الطلب', 'Submit application')}</button>` : `<button type="button" class="gbtn primary" id="cvNext">${t('next')}</button>`}</div>`;
+  bind(host, fields);
+}
+function reviewHTML() {
+  return `<div class="cv-review">${CV_STEPS.slice(0, -1).map((s, i) => `<section class="g sm"><h3>${esc(L(s.ar, s.en))}<button type="button" class="gbtn sm" data-go="${i}">${t('edit')}</button></h3><dl>${cvStepFields(i, S.a).filter(f => f.t !== 'subhead' && f.t !== 'consent' && (!f.show || f.show(S.a)) && f.ar.trim()).map(f => `<dt>${esc(L(f.ar, f.en))}</dt><dd>${esc(f.t === 'file' ? (S.cv ? S.cv.name : '—') : cvValueText(f, S.a[f.id]))}</dd>`).join('')}</dl></section>`).join('')}</div>`;
+}
+function bind(host, fields) {
+  const a = S.a, set = (k, v) => { a[k] = v; saveDraft(); const w = $(`[data-wrap="${k}"]`); if (w && w.classList.contains('bad')) { w.classList.remove('bad'); const m = $(`[data-msg="${k}"]`); if (m) m.textContent = ''; } };
+  $$('[data-f]', host).forEach(el => { const k = el.dataset.f; el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => { set(k, el.value);
+    const f = fields.find(x => x.id === k), c = $(`[data-cnt="${k}"]`); if (c && f) { const n = el.value.trim().length; c.textContent = fmtNum(n) + ' / ' + fmtNum(f.min) + '+'; c.classList.toggle('ok', n >= f.min); }
+    if (k === 'source') renderApp(); }); });
+  $$('[data-seg]', host).forEach(g => g.onclick = e => { const b = e.target.closest('button'); if (!b) return; set(g.dataset.seg, b.dataset.v); $$('button', g).forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-checked', x === b); }); });
+  $$('[data-rate]', host).forEach(g => g.onclick = e => { const b = e.target.closest('button'); if (!b) return; set(g.dataset.rate, +b.dataset.v); $$('button', g).forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-checked', x === b); }); });
+  $$('[data-checks]', host).forEach(g => g.onchange = () => set(g.dataset.checks, $$('input:checked', g).map(i => i.value)));
+  $$('[data-consent]', host).forEach(c => c.onchange = () => set(c.dataset.consent, c.checked));
+  $$('[data-file]', host).forEach(inp => inp.onchange = () => {
+    const f = inp.files[0]; if (!f) return;
+    if (f.size > 3 * 1048576) { showErrors([['cv', L('الملف أكبر من ٣ ميجا', 'The file is larger than 3 MB')]]); inp.value = ''; return; }
+    const r = new FileReader(); r.onload = () => { S.cv = { name: f.name, size: f.size, type: f.type, data: String(r.result).split(',')[1] }; set('cv', { name: f.name, size: f.size }); renderApp(); }; r.readAsDataURL(f);
+  });
+  $$('[data-rmfile]', host).forEach(b => b.onclick = () => { S.cv = null; set('cv', null); renderApp(); });
+  $$('[data-go]', host).forEach(b => b.onclick = () => { S.step = +b.dataset.go; saveDraft(); renderApp(); toTop(); });
+  const back = $('#cvBack'); if (back) back.onclick = () => { S.step--; saveDraft(); renderApp(); toTop(); };
+  const next = $('#cvNext'); if (next) next.onclick = () => { const errs = validate(fields); if (errs.length) { showErrors(errs); return; } S.step++; S.max = Math.max(S.max, S.step); saveDraft(); renderApp(); toTop(); };
+  const send = $('#cvSend'); if (send) send.onclick = () => submit(send);
+}
+const toTop = () => { const el = $('#apply'); if (el) el.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); };
+
+async function submit(btn) {
+  for (let i = 0; i < CV_STEPS.length - 1; i++) { const errs = validate(cvStepFields(i, S.a)); if (errs.length) { S.step = i; renderApp(); showErrors(errs); return; } }
+  if (!SHEET_URL) { showErrors([], L('الصفحة لسه مش متوصلة بشيت الطلبات. بلّغ الشركة.', 'This page is not connected to the applications sheet yet. Please tell the company.')); return; }
+  const a = S.a, fields = cvAllFields(a).filter(f => f.t !== 'file' && (!f.show || f.show(a)));
+  const values = {}, columns = [];
+  for (const f of fields) { const h = HEAD[f.id] || f.id; columns.push(h); values[h] = f.t === 'rate' ? (+a[f.id] || '') : (f.t === 'number' && a[f.id] ? +a[f.id] : arText(f, a[f.id]).replace(/^—$/, '')); }
+  const payload = { website: ($('#cv_website') || {}).value || '', seconds: Math.round((Date.now() - S.startedAt) / 1000), lang: LANG, roleKey: a.role, aiScore: cvAiScore(a), columns, values, cv: S.cv };
+  btn.disabled = true; const label = btn.textContent; btn.textContent = L('جاري الإرسال…', 'Sending…');
+  try {
+    const res = await fetch(SHEET_URL, { method: 'POST', body: JSON.stringify(payload) });
+    const out = await res.json();
+    if (!out.ok) throw new Error(out.error || 'server');
+    LS.del(DRAFT); S.done = { ref: out.ref, name: String(a.fullName).trim().split(/\s+/)[0] }; S.keep = { fullName: a.fullName, phone: a.phone, email: a.email, city: a.city, linkedin: a.linkedin }; S.a = {}; S.cv = null; S.step = 0; S.max = 0; renderApp(); toTop();
+  } catch (e) {
+    btn.disabled = false; btn.textContent = label;
+    showErrors([], L('ما قدرناش نبعت الطلب. اتأكد من الإنترنت وجرّب تاني، إجاباتك محفوظة.', 'We could not send your application. Check your connection and try again; your answers are saved.'));
+  }
+}
+
+/* ---------- page ---------- */
+function render() {
+  document.documentElement.lang = LANG; document.documentElement.dir = LANG === 'ar' ? 'rtl' : 'ltr';
+  document.title = L('الوظائف في RTU', 'Careers at RTU');
+  const open = cvOpenRolesSA(), groups = ['tech', 'creative', 'business'].map(g => [g, open.filter(r => r.g === g)]).filter(x => x[1].length);
+  const PROC = [[L('املا الطلب', 'Fill in the form'), L('حوالي ٢٠ دقيقة، وإجاباتك بتتحفظ على جهازك لو قفلت الصفحة.', 'About 20 minutes; answers save on your device if you close the page.')], [L('بنراجع طلبك', 'We review it'), L('بنقرا إجاباتك العملية بنفسنا، مش فلتر أوتوماتيك.', 'A person reads your practical answers, not an automatic filter.')], [L('مهمة عملية', 'Practical task'), L('مهمة قصيرة من شغلنا الحقيقي، تنفذها بأدوات الـ AI اللي تختارها.', 'A short task from real work, done with the AI tools you choose.')], [L('مقابلة', 'Interview'), L('نتكلم عن المهمة وطريقة شغلك، أونلاين أو في المقر.', 'We discuss the task and how you work, online or in person.')]];
+  $('#hdr').innerHTML = `<div class="cv-wrap bar"><span class="brand"><span class="led"></span>RTU<small>READY TO USE</small></span><span class="sp"></span><a class="gbtn sm hide-sm" href="#roles">${L('الوظائف', 'Roles')}</a><a class="gbtn sm primary" href="#apply">${L('قدّم', 'Apply')}</a><button type="button" class="gbtn sm" id="lang">${LANG === 'ar' ? 'EN' : 'عربي'}</button></div>`;
+  $('#lang').onclick = () => { LANG = LANG === 'ar' ? 'en' : 'ar'; LS.set('rtu_cv_lang', LANG); render(); };
+  $('#main').innerHTML = `
+  <section class="cv-hero"><div class="cv-wrap"><div class="g cv-hero-card" data-sheen>
+    <div><span class="cv-eyebrow g sm"><span class="led"></span>${L('الوظائف في RTU', 'Careers at RTU')}</span>
+      <h1>${L('اشتغل معانا.', 'Work with us.')}<br><span class="hl">${L('الـ AI أداتك الأولى.', 'AI is your first tool.')}</span></h1>
+      <p class="lede">${L('في RTU كل خدمة بنقدمها، من الأنظمة للتصميم للفيديو، بتتنفذ بأدوات الذكاء الاصطناعي، والإنسان هو اللي بيوجّه ويراجع ويسلّم. لو بتعرف تطلّع من الـ AI شغل جاهز للتسليم، مكانك هنا.', 'At RTU every service, from systems to design to video, is built with AI tools, while people direct, review and deliver. If you can get client-ready work out of AI, you belong here.')}</p>
+      <div class="cv-cta"><a class="gbtn primary" href="#apply">${L('قدّم دلوقتي', 'Apply now')}</a><a class="gbtn" href="#roles">${L('الوظائف المتاحة', 'Open roles')} (${fmtNum(open.length - 1)})</a></div></div>
+    <div class="cv-facts">
+      <div class="g sm cv-fact"><span>${L('طريقة الشغل', 'How we work')}</span><b>${L('AI أولًا، ومراجعة بشرية', 'AI first, human review')}</b></div>
+      <div class="g sm cv-fact"><span>${L('أنواع التعاقد', 'Contract types')}</span><b>${L('دوام، جزئي، فريلانس، تدريب', 'Full, part-time, freelance, intern')}</b></div>
+      <div class="g sm cv-fact"><span>${L('مكان الشغل', 'Location')}</span><b>${L('مقر، عن بُعد، هجين', 'On-site, remote, hybrid')}</b></div>
+      <div class="g sm cv-fact"><span>${L('وقت التقديم', 'Time to apply')}</span><b>${L('٢٠ دقيقة تقريبًا', 'About 20 min')}</b></div></div></div></div></section>
+  <section class="cv-sec"><div class="cv-wrap"><h2 class="cv-h2">${L('خطوات التوظيف', 'Hiring steps')}</h2><p class="cv-sub">${L('بنهتم بشغلك الحقيقي أكتر من الشهادات.', 'We care about your real work more than certificates.')}</p>
+    <div class="cv-steps-row">${PROC.map((p, i) => `<div class="g sm cv-step"><span class="n">0${i + 1}</span><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join('')}</div></div></section>
+  <section class="cv-sec" id="roles"><div class="cv-wrap"><h2 class="cv-h2">${L('الوظائف المتاحة', 'Open roles')}</h2><p class="cv-sub">${L('اختار وظيفة، والأسئلة العملية في الطلب هتتغير حسب تخصصها.', 'Pick a role; the practical questions adapt to it.')}</p>
+    ${groups.length ? groups.map(([g, rs]) => `<div class="cv-group"><h3>${esc(L(CV_GROUPS[g][0], CV_GROUPS[g][1]))}</h3><div class="cv-roles">${rs.map(r => `<article class="g sm cv-role" data-sheen><h4>${esc(L(r.ar, r.en))}</h4><p>${esc(L(r.dAr, r.dEn))}</p><button type="button" class="gbtn sm ${S.a.role === r.k ? 'primary' : ''}" data-pick="${r.k}">${S.a.role === r.k ? L('اخترتها ✓', 'Selected ✓') : L('قدّم على الوظيفة دي', 'Apply for this role')}</button></article>`).join('')}</div></div>`).join('')
+      : `<div class="g sm cv-closed">${L('مافيش وظايف مفتوحة حاليًا. تقدر تبعت تقديم عام.', 'No roles are open right now. You can send a general application.')}</div>`}
+    <div class="g sm cv-general"><div><h4>${L('مش لاقي وظيفتك؟', 'Don\'t see your role?')}</h4><p>${L('قدّم تقديم عام وقولنا بتعرف تعمل إيه بالـ AI.', 'Send a general application and tell us what you can do with AI.')}</p></div><button type="button" class="gbtn sm ${S.a.role === 'general' ? 'primary' : ''}" data-pick="general">${S.a.role === 'general' ? L('اخترته ✓', 'Selected ✓') : L('تقديم عام', 'General application')}</button></div>
+  </div></section>
+  <section class="cv-sec" id="apply"><div class="cv-wrap"><div class="g cv-app" id="cvApp"></div></div></section>`;
+  $('#ftr').innerHTML = `<div class="cv-wrap">© ${new Date().getFullYear()} RTU · Ready To Use</div>`;
+  $$('[data-pick]').forEach(b => b.onclick = () => { S.a.role = b.dataset.pick; saveDraft(); render(); toTop(); });
+  $$('[data-sheen]').forEach(el => el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%'); el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%'); }));
+  renderApp();
+}
+loadDraft(); render();
+
+</script>
+</body>
+</html>
